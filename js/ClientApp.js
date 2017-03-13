@@ -5,11 +5,14 @@ var MyTitle = React.createClass({
   render: function () {
     return (
       div(null,
-        h1(null, 'My title component')
+        // props: properties passed in by the parent component
+        h1(null, this.props.title)
       )
     )
   }
 })
+
+var MyTitleFactory = React.createFactory(MyTitle)
 
 // Components named with Pascal Case.
 var MyFirstComponent = React.createClass({
@@ -17,10 +20,11 @@ var MyFirstComponent = React.createClass({
   render: function () {
     return (
       div(null,
-        React.createElement(MyTitle),
-        React.createElement(MyTitle),
-        React.createElement(MyTitle),
-        React.createElement(MyTitle)
+        // these properties can be read by the children but not modified
+        MyTitleFactory({title: 'my first props'}),
+        MyTitleFactory({title: 'my first props'}),
+        MyTitleFactory({title: 'my first props'}),
+        MyTitleFactory({title: 'my first props'})
       )
     )
   }
