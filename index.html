@@ -12,20 +12,6 @@
   <div id="app"><h1>Some text</h1></div>
   <script src="node_modules/react/dist/react.js"></script>
   <script src="node_modules/react-dom/dist/react-dom.js"></script>
-  <script>
-    // Components named with Pascal Case.
-    var MyFirstComponent = React.createClass({
-      render: function () {
-        return (
-          React.DOM.div(null,
-            React.DOM.h1(null, 'this is  my first component!')
-          )
-        )
-      }
-    })
-
-    // Tell the ReactDOM what to render and where
-    ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'))
-  </script>
+  <script src="js/ClientApp.js"></script>
 </body>
 </html>
