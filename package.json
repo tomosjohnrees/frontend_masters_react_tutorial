@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Tomos John Rees <sabt@live.co.uk>",
   "license": "MIT",
+  "scripts": {
+    "lint": "standard"
+  },
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
