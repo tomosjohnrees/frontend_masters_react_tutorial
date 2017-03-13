@@ -6,7 +6,8 @@ var MyTitle = React.createClass({
     return (
       div(null,
         // props: properties passed in by the parent component
-        h1(null, this.props.title)
+        // styles are passed through in an object 
+        h1({style: { color: this.props.color } }, this.props.title)
       )
     )
   }
@@ -21,10 +22,10 @@ var MyFirstComponent = React.createClass({
     return (
       div(null,
         // these properties can be read by the children but not modified
-        MyTitleFactory({title: 'my first props'}),
-        MyTitleFactory({title: 'my first props'}),
-        MyTitleFactory({title: 'my first props'}),
-        MyTitleFactory({title: 'my first props'})
+        MyTitleFactory({title: 'my first props', color: 'peru'}),
+        MyTitleFactory({title: 'my first props', color: 'red'}),
+        MyTitleFactory({title: 'my first props', color: 'green'}),
+        MyTitleFactory({title: 'my first props', color: 'blue'})
       )
     )
   }
