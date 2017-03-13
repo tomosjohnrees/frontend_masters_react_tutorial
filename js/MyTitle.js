@@ -1,16 +1,16 @@
 import React from 'react'
 
-var div = React.DOM.div
-var h1 = React.DOM.h1
-
 var MyTitle = React.createClass({
   render: function () {
+    const style = { color: this.props.color }
+
+    // curly braces with {this.props.title} is equivalent to <%= @props.title %> in erb
     return (
-      div(null,
-        // props: properties passed in by the parent component
-        // styles are passed through in an object
-        h1({ style: { color: this.props.color } }, this.props.title)
-      )
+      <div>
+        <h1 style={style}>
+          {this.props.title}
+        </h1>
+      </div>
     )
   }
 })
