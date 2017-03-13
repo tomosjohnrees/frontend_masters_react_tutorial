@@ -1,0 +1,11 @@
+ /*don't use es2015 in production due to it pulling in packages which aren't necessarily used,
+call individual packages instead*/
+
+/*leave bundling of modules to webpack, it takes out unused functions, which results in a smaller bundle.*/
+
+{
+  "presets": [
+    "react",
+    ["es2015", {"modules": false, "loose": true}]
+  ]
+}

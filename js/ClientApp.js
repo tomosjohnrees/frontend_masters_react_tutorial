@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import MyTitle from './MyTitle'
 
 var MyTitleFactory = React.createFactory(MyTitle)
+var div = React.DOM.div
 
 // Components named with Pascal Case.
 var MyFirstComponent = React.createClass({
