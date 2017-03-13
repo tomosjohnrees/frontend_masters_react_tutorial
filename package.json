@@ -1,0 +1,11 @@
+{
+  "name": "front_end_masters_react_redux_tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tomos John Rees <sabt@live.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}

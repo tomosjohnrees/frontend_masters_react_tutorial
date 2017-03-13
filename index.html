@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Frontend Masters React</title>
+</head>
+<body>
+  <!-- React will mount here -->
+  <!-- "Some text" will be displayed until ReactDOM.render is called -->
+  <div id="app"><h1>Some text</h1></div>
+  <script src="node_modules/react/dist/react.js"></script>
+  <script src="node_modules/react-dom/dist/react-dom.js"></script>
+  <script>
+    // Components named with Pascal Case.
+    var MyFirstComponent = React.createClass({
+      render: function () {
+        return (
+          React.DOM.div(null,
+            React.DOM.h1(null, 'this is  my first component!')
+          )
+        )
+      }
+    })
+
+    // Tell the ReactDOM what to render and where
+    ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'))
+  </script>
+</body>
+</html>
