@@ -8,16 +8,14 @@ const ShowCard = React.createClass({
 
   // React only checks propTypes in dev
   propTypes: {
-    show: shape({
       poster: string,
       title: string,
       year: string,
       description: string
-    })
   },
   render () {
     // destucturing allows a much cleaner component
-    const { poster, title, year, description } = this.props.show
+    const { poster, title, year, description } = this.props
 
     return (
       <div className='show-card'>
