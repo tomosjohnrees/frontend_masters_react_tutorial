@@ -2,15 +2,16 @@ import React from 'react'
 
 const ShowCard = React.createClass({
   render () {
-    const show = this.props.show
+    // destucturing allows a much cleaner component
+    const { poster, title, year, description } = this.props.show
 
     return (
       <div className='show-card'>
-        <img src={`/public/img/posters/${show.poster}`} />
+        <img src={`/public/img/posters/${poster}`} />
         <div>
-          <h3>{show.title}</h3>
-          <h4>({show.year})</h4>
-          <p>{show.description}</p>
+          <h3>{title}</h3>
+          <h4>({year})</h4>
+          <p>{description}</p>
         </div>
       </div>
     )
