@@ -1,9 +1,15 @@
 import React from 'react'
-console.log("oi oi");
+import preLoad from '../public/data.json'
+
 const Search = React.createClass({
   render () {
     return (
-      <h1> Search page</h1>
+      <div className="search">
+        <h1> Search page</h1>
+        <pre>
+          <code>{JSON.stringify(preLoad, null, 4)})</code>
+        </pre>
+      </div>
     )
   }
 })
