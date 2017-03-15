@@ -30,6 +30,22 @@ module.exports = {
         include: path.resolve(__dirname, 'js'),
         test: /\.js$/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        // TODO: This is going to compile the js in to the bundle. Look in to splitting the JS and CSS out to seperate files.
+        // we can pass multiple loaders
+        use: [
+          // loader with no configuration
+          'style-loader',
+          // loader with configuration
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
       }
     ]
   }
