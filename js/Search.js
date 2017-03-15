@@ -9,6 +9,10 @@ const Search = React.createClass({
   render () {
     return (
       <div className="search">
+        <header>
+          <h1>svideo</h1>
+          <input type='text' placeholder='Search' />
+        </header>
         <div>
           {preLoad.shows.map( show => {
               return (
