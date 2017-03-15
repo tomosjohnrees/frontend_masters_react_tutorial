@@ -13,6 +13,10 @@ module.exports = {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
   },
+  devServer: {
+    // setting up the static directory
+    publicPath: '/public/'
+  },
   resolve: {
     // requiring a file without an extension will check for a file with no extension, then traverse the list before giving up
     extensions: ['.js', '.json']
