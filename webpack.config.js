@@ -15,7 +15,9 @@ module.exports = {
   },
   devServer: {
     // setting up the static directory
-    publicPath: '/public/'
+    publicPath: '/public/',
+    // reroute 404s to the homepage in the hope that react router will know what to do
+    historyApiFallback: true
   },
   resolve: {
     // requiring a file without an extension will check for a file with no extension, then traverse the list before giving up
