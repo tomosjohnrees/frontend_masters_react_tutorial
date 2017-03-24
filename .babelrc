@@ -3,9 +3,16 @@ call individual packages instead*/
 
 /*leave bundling of modules to webpack, it takes out unused functions, which results in a smaller bundle.*/
 
+/* env comes from NODE_ENV which we set to test in the test script */
+
 {
   "presets": [
     "react",
     ["es2015", {"modules": false, "loose": true}]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
 }
